@@ -8,9 +8,9 @@ function App() {
   return (
     <>
       <div>
-        <CakeView/>
-        <IceView/>
-        <UserView/>
+        <CakeView />
+        <IceView />
+        <UserView />
       </div>
     </>
   )

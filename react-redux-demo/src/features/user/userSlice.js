@@ -7,10 +7,10 @@ const initialUserState = {
     error: ''
 }
 
-// createAsyncThunk use to call asynchronus api method.Like:GET, POST, PUT
-export const fetchUser = createAsyncThunk("user/fetchUser", () => {
-    return axios.get("https://jsonplaceholder.typicode.com/users")
-        .then((res) => res.data)
+// createAsyncThunk use to call asynchronus api method.Ex:GET, POST, PUT
+export const fetchUser = createAsyncThunk("user/fetchUser", async () => {
+    const res = await axios.get("https://jsonplaceholder.typicode.com/users");
+    return res.data;
 })
 const userSlice = createSlice({
     name: 'user',
